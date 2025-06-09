@@ -5,14 +5,14 @@ Este projeto tem como objetivo demonstrar a aplicação de Python para realizaç
 ## Objetivos do Projeto
 
 * Automatizar a previsão financeira de receita mensal
-* Aplicar métodos de série temporal (Holt-Winters)
+* Aplicar métodos de série temporal (Holt-Winters com tendência)
 * Criar um gráfico visual para tomada de decisão
 * Fornecer uma base para aplicações em FP\&A e controle financeiro
 
 ## Funcionalidades
 
 * Leitura de dados históricos a partir de um arquivo CSV (`dados_receita.csv`)
-* Ajuste de modelo de previsão com `ExponentialSmoothing`
+* Ajuste de modelo de previsão com `ExponentialSmoothing` (sem sazonalidade)
 * Geração de gráfico com receita histórica e prevista
 * Exportação automática do gráfico em PNG
 
@@ -28,16 +28,26 @@ pip install pandas matplotlib statsmodels
 3. Execute o script principal:
 
 ```bash
-python forecast_financeiro.py
+python forecast.py
 ```
 
 4. O arquivo `dados_receita.csv` contém os dados de entrada e pode ser atualizado conforme sua necessidade.
 
+## Formato do CSV esperado
+
+```csv
+Mes,Receita
+2023-01,15000
+2023-02,16000
+...
+```
+
 ## Exemplo de Gráfico Gerado
 
-O gráfico exibe a curva histórica de receitas e a projeção para os próximos 12 meses, permitindo tomada de decisão rápida e baseada em dados.
+O gráfico exibe a curva histórica de receitas e a projeção para os próximos meses, permitindo tomada de decisão rápida e baseada em dados.
 
-![Gráfico Forecast](forecast_grafico.png)
+![grafico_forecast](https://github.com/user-attachments/assets/b1fc5baf-0ce5-4e61-98a1-f33a3a735939)
+
 
 ## Autor
 
@@ -49,3 +59,4 @@ Especialista em FP\&A, Análise de Dados Financeiros, Riscos e Produtos
 ---
 
 Este é apenas o primeiro projeto da minha série de aplicações em finanas, BI e automação com dados. Acompanhe o repositório para novas publicações!
+
